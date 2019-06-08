@@ -1,0 +1,118 @@
+.
+.container
+{
+}
+
+.panel-group
+{ 
+ width:34%;
+}
+
+
+#leftHeading
+{ 
+ color:red;
+ margin-left:5%;
+ font-family:serif;
+font-size:130%;
+}  
+#top 
+{
+ text-align: center;
+ color: black;
+ font-family:serif;
+ border-bottom-style: solid;
+ border-top-style: solid;
+ border-width:1.5px;
+}
+#head1
+{
+ text-align:center;
+ font-family:serif;
+font-size:200%;
+}
+
+ 
+#head2
+{
+ text-align:center;
+ font-family:serif;
+ font-size:130%;
+
+} 
+#head3
+{
+ text-align:center;
+ font-family:serif;
+font-size:130%;
+
+}
+   
+#intext1
+{
+ text-align:left;
+ color:green;
+}
+#intext2
+{
+ text-align:left;
+ color:green;
+}
+#intext3
+{
+ text-align:left;
+ color:green;
+}
+
+#box 
+{
+ position:absolute;
+ width:35%;
+ height:80%;
+ bottom:-2%;
+ margin-left:38%;
+border: 1px solid lightgrey;
+}
+#pp
+{
+ position:absolute;
+ bottom:77%;
+ margin-left:43%;
+ color:red;
+ font-family:serif;
+font-size:130%;
+}
+#pp1
+{
+ position:absolute;
+ bottom:79%;
+ margin-left:63%;
+ color:black;
+font-size:120%;
+}
+
+#RepoBox 
+{
+ position:absolute;
+ width:27%;
+ height:30%;
+ bottom:-37%;
+ margin-left:7%;
+ border: 1px solid lightgrey;
+}
+#ppl
+{
+ position:absolute;
+ margin-left:12.5%;
+ color:red;
+ bottom:-8%;
+ font-family:serif;
+font-size:130%;
+
+}
+
+    
+    
+
+
+
