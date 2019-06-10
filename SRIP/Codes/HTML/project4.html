@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../Libraries/bootstrap.min.css">
+  <link rel= "stylesheet" href ="./../CSS/project4.css">
+  <script src="./../../Libraries/jquery.min.js"></script>
+  <script src="./../../Libraries//bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+<h1 id="top"><em> EXPERIMENT:SPICE CODE</em></h1><br>
+
+<div class="container">
+
+  <h4 id="leftHeading">CODES FOR REFERENCES:</h4>
+
+
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default" >
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <h4 id="head1" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><b><em>Inverter Spice Code:</em></b></h4>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body" id="intext" >.include 45nm_HP.pm<br>
+  M1 out in Vdd Vdd PMOS l=50n w= 450n<br>
+  M2 out in 0 0 NMOS l=50n w=100n<br>
+  cl out 0 100f<br>
+  Vdd Vdd 0 1.1<br>
+  Vin in 0 pulse (0 1.1 0 1n 1n 10n 22n)<br>
+  .tran 1n 100n<br>
+  .save V(out) V(in)<br>
+  .end<br> </div>
+    </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <h4 id="head1" data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b><em>Nand Spice Code:</em></b></h4>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" id="intext">
+.include 45nm_HP.pm<br>
+  M1 out b Vdd Vdd PMOS l=50n w=100n<br>
+  M2 out a vdd vdd PMOS l=50n w=100n<br>
+  M3 N b out 0 NMOS l=50n w=100n<br>
+  M4 0 a N 0 NMOS l=50n w=100n<br>
+  cl out 0 7f<br>
+  Vdd Vdd 0 1.1<br>
+  Va a 0 pulse ( 0 1.1 0 1n 1n 5n 10n )<br>
+  Vb b 0 pulse (0 1.1 0 1n 1n 10n 20n )<br>
+  .tran 1n 100n<br>
+  .save V(out) V(a) V(b)<br>
+  .end<br>
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <h4 id="head1" data-toggle="collapse" data-parent="#accordion"href="#collapse3"><b><em>Nor Spice Code:</em></b></h4>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body" id="intext">.include 45nm_HP.pm<br>
+  M1 out b N Vdd PMOS l=50n w=100n<br>
+  M2 N a vdd vdd PMOS l=50n w=100n<br>
+  M3 0 a out 0 NMOS l=50n w=100n<br>
+  M4 0 b out 0 NMOS l=50n w=100n<br>
+  cl out 0 100f<br>
+  Vdd Vdd 0 1.1<br>
+  Va a 0 pulse (0 1.1 0 1n 1n 5n 10n )<br>
+  Vb b 0 pulse (0 1.1 0 1n 1n 10n 20n )<br>
+  .tran 1n 100n<br>
+  .save V(out) V(a) V(b)<br>
+  .end</div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="pp">ENTER YOUR CODE HERE <input type="submit" value="SIMULATE"></h4>
+
+<form action="" method="">
+  <textarea id="box"   >Write Your Code Here and Delete this Line</textarea>
+  <br>
+
+</form>
+<h4 id="ppl">SIMULATION REPORT</h4>
+
+<form action="" method="">
+  <textarea id="RepoBox" >Scroll Down To See the Whole Report.</textarea>
+  <br>
+</form>
+
+
+
+</body>
+</html>
